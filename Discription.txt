@@ -1,0 +1,2 @@
+This is a simpple branch for storing all my practice code
+For some reason i keep master branch empty
