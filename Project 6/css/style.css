@@ -1,0 +1,697 @@
+*{margin: 0; padding: 0; box-sizing: border-box}
+*::before, *::after{
+  box-sizing: initial;
+}
+/* fonts */
+@font-face {
+  font-family: "GothamBold";
+  src: url("../font/GothamBold.otf");
+}
+@font-face {
+  font-family: "GothamBook";
+  src: url("../font/GothamBook.ttf");
+}
+@font-face {
+  font-family: "GothamLightRegular";
+  src: url("../font/GothamLightRegular.otf");
+}
+@font-face {
+  font-family: "GothamMedium";
+  src: url("../font/GothamMedium.otf");
+}
+@font-face {
+  font-family: "OpenSans-Italic";
+  src: url("../font/OpenSans-Italic.ttf");
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../font/OpenSans-Regular.ttf");
+}
+/* typography */
+section, header, footer, main{
+  width: 100%;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0px;
+}
+.flex{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+  color: #494949;
+}
+.btn{
+  display: inline-block;
+}
+.para{
+  font-family: GothamBook;
+  font-size: 15px;
+  color: #494949;
+  line-height: 20px;
+}
+.btn_wrap{
+  text-align: center;
+}
+.btn_wrap .btn, .btn{
+  background-color: #db3838;
+  padding: 12px 25px;
+  font-family: GothamMedium;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: #fff;
+}
+.free_space{
+  padding: 35px 0px;
+  font-weight: 100;
+}
+.clo_hea{
+  font-family: GothamBook;
+  color: #444444;
+  font-size: 26px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.arro_wrap{
+  float: right;
+  width: 40%;
+}
+.arro_wrap figure{
+  flex-basis: 44%;
+}
+.arro_wrap figure img{
+  width: 100%;
+}
+.art_wrap .para{
+ font-family: GothamMedium;
+ text-transform: capitalize;
+ padding-bottom: 10px;
+ border-bottom: 2px solid rgba(86, 93, 92, 0.5);
+}
+.art_wrap .rev_pr{
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.rev_pr .rev{
+  flex-basis: 48%;
+}
+.rev_pr .rev_right{
+  flex-basis: 45%;
+}
+.rev_pr .rev_right .btn_wrap{
+  margin-top: 10px;
+}
+.rev_right .btn_wrap .btn{
+  padding: 10px 6px;
+}
+.rev_pr .rev h1{
+  font-family: GothamMedium;
+  font-size: 19px;
+  line-height: 20px;
+  margin-bottom: 5px;
+  color: #828282;
+}
+.rev_pr .rev .review{
+
+}
+.rev_pr .rev .review i{
+  font-size: 12px;
+  color: #ffc861;
+}
+.rev_pr .rev .review i:last-child{
+  color: #494949;
+}
+/* header top */
+#header_top{
+  background-color: #fff;
+  border-bottom: 1px solid #494949;
+}
+.hea_top_con{
+  padding: 0px 0px;
+}
+.hea_top_con .hea_child{
+  flex: 0 0 30%;
+  padding: 10px 0px;
+}
+.hea_top_con .h_t_cen{
+  flex: 0 0 38%;
+  border-left: 1px solid #494949;
+  border-right: 1px solid #494949;
+  padding: 10px 0px;
+}
+.hea_top_con .hea_child .para{
+  text-transform: uppercase;
+  text-align: center;
+}
+/* nav top */
+#nav_top{
+  background-color: #fff;
+}
+#nav_top .n_t_con{
+  padding: 10px 0px 5px 0px;
+  align-items: center;
+}
+/* left */
+.n_t_con .n_t_left{
+  flex: 0 0 20%;
+  background-color: #fff;
+  margin-bottom: -12px;
+}
+.n_t_con .n_t_left .brand{
+  width: 100%;
+  padding: 15px 10px;
+}
+.n_t_con .n_t_left .brand figure{
+  width: 90%;
+  text-align: center;
+}
+.n_t_con .n_t_left .brand figure img{
+  width: 100%;
+}
+/* center */
+.n_t_con .n_t_center{
+  flex: 0 0 55%;
+  align-self: center;
+}
+.n_t_con .n_t_center form{
+  width: 100%;
+}
+.n_t_con .n_t_center form .input_contain{
+  width: 100%;
+  border: 1px solid #49494938;
+}
+.n_t_con .n_t_center .input_contain .search_box{
+  flex: 1 0 60%;
+  padding: 12px 10px;
+  border-width: 0px;
+}
+.n_t_con .n_t_center .input_contain .select_option{
+  flex: 1 0 30%;
+  padding: 0px 10px;
+  border-width: 0px;
+}
+.n_t_con .n_t_center .input_contain .search_box::placeholder{
+ font-family: GothamBook;
+ font-size: 15px;
+ text-transform: capitalize;
+ color: #494949;
+}
+.n_t_con .n_t_center .input_contain .select_option{
+  text-align: center;
+  text-transform: capitalize;
+}
+.n_t_con .n_t_center .input_contain #submit{
+  flex: 1 0 10%;
+  border-width: 0px;
+  background: #db3838 url("../img/search_icon.png") no-repeat 40% 40%;
+  background-size: 33%;
+}
+
+/* right */
+.n_t_con .n_t_right{
+  flex: 0 0 20%;
+  overflow: hidden;
+}
+.n_t_con .n_t_right nav{
+  width: 90%;
+  float: right;
+}
+.n_t_con .n_t_right nav a{
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #494949;
+  padding: 7px 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.n_t_con .n_t_right nav a:hover{
+  background-color: #494949;
+}
+.n_t_con .n_t_right nav a:hover i{
+  color: #fff;
+}
+.n_t_con .n_t_right nav a:first-child{
+  padding: 7px 13px;
+}
+.n_t_con .n_t_right nav a i{
+  font-size: 18px;
+  color: #494949;
+}
+/* nav bar */
+#nav{
+  background-color: #000;
+}
+#nav .nav_con{
+  padding: 0px 0px;
+}
+/* first item */
+.nav_con .nav_left{
+  flex: 1 0 65%;
+}
+.nav_con .nav_bar{
+  width: 90%;
+  margin: 0 auto;
+}
+.nav_con .nav_bar a{
+  flex-grow: 1;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: GothamMedium;
+  font-size: 14px;
+  text-align: center;
+  padding: 23px 0px 23px 0px;
+  transition: padding 0.3s, border-bottom 0.3s;
+}
+.nav_con .nav_bar a:hover{
+  padding: 23px 0px 18px 0px;
+  border-bottom: 5px solid #db3838;
+}
+/* secound item */
+.nav_con .nav_right{
+  flex: 1 0 5%;
+  background-color: #db3838;
+  padding: 20px 0px;
+  cursor: pointer;
+}
+.nav_con .nav_right span{
+  width: 100%;
+  margin-top: 5px;
+}
+.nav_con .nav_right span p{
+  font-family: GothamMedium;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+}
+/* main */
+#main{
+  background: transparent url("../img/main_background.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#main .ma_con{
+  width: 90%;
+  padding: 65px 0px 115px 0px;
+}
+#slide_con{
+  width: 100%;
+  align-items: center;
+}
+/* left side */
+#slide_con .slide_btn{
+
+}
+#slide_con .slide_btn figure{
+  width: 100%;
+  cursor: pointer;
+}
+#slide_con .slide_btn figure img{
+  width: 100%;
+}
+/* center side */
+#slide_con .slide_center{
+  flex-basis: 75%;
+  padding: 70px 0px;
+}
+#slide_con .slide_center .art_cont h6{
+  font-family: OpenSans-Regular;
+  color: #fff;
+  font-size: 30px;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+}
+#slide_con .slide_center .art_cont h1{
+  font-family: GothamBold;
+  color: #fff;
+  font-size: 70px;
+  line-height: 75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+#slide_con .slide_center .art_cont h3{
+  font-family: GothamBold;
+  color: #fff;
+  font-size: 40px;
+  line-height: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+}
+#slide_con .slide_center .art_cont .art_wr{
+  margin: 0 auto;
+  width: 25%;
+}
+#slide_con .slide_center .art_cont .art_wr span{
+  border-bottom: 1px solid #fff;
+  align-self: center;
+  width: 35%;
+}
+#slide_con .slide_center .art_cont .art_wr p{
+  font-family: OpenSans-Italic;
+  font-size: 32px;
+  color: #fff;
+}
+/* fashion filter section */
+#fas_filter{}
+.fas_fil_con{
+  padding: 45px 0px;
+}
+.fas_fil_con .link_sec{
+}
+.fas_fil_con .link_sec .para{
+  text-transform: capitalize;
+  text-align: center;
+  flex-grow: 1;
+  font-weight: bold;
+}
+/* cloths item */
+#pro_cart{
+  background: transparent url("../img/background_color.png") no-repeat 0% 0%;
+  background-size: 7% 100%;
+}
+.pro_ca_con{
+  padding: 0px 0px;
+}
+.pro_ca_con .pro_wrap .pro_item{
+  flex-basis: 31.5%;
+}
+.pro_ca_con .pro_wrap .pro_left{
+  background: transparent url("../img/clothes.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.pro_ca_con .pro_wrap .pro_center{
+  background: transparent url("../img/footwear.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.pro_ca_con .pro_wrap .pro_right{
+  background: transparent url("../img/hand_bags.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.pro_ca_con .pro_wrap .pro_item .pro_art{
+  width: 80%;
+  margin: 75px auto 65px auto;
+}
+.pro_ca_con .pro_wrap .pro_item .pro_art h1{
+  text-align: center;
+  font-family: GothamMedium;
+  font-size: 26px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.pro_ca_con .pro_wrap .pro_item .pro_art .btn_wrap{
+  margin-top: 30px;
+}
+/* men section */
+#men_section{
+  background: transparent url("../img/for_men_side.png") no-repeat right;
+  background-size: 8% 100%
+}
+.men_con{
+  padding: 0px;
+}
+.men_con .top_sec .sel_left{
+  flex: 0 0 60%;
+}
+.men_con .top_sec .sel_left .clo_hea{
+  width: 50%;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #808080;
+}
+.men_con .top_sec .sel_right{
+  flex: 0 0 20%;
+  overflow: hidden;
+}
+/* bottom section */
+.men_con .bottom_sec{
+  padding-top: 30px;
+  align-items: flex-start;
+}
+.men_con .bottom_sec .b_s_chi{
+  flex: 0 0 48.5%;
+}
+/* left side */
+.bottom_sec .b_s_left{
+  background: transparent url("../img/b_s_left.png") no-repeat 0 0;
+  background-size: 100% 100%;
+  padding: 120px 10px 120px 10px;
+}
+.bottom_sec .b_s_left .art_btn{
+
+}
+.bottom_sec .b_s_left .art_btn .hea{
+  font-family: GothamMedium;
+  color: #fff;
+  font-size: 44px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.bottom_sec .b_s_left .art_btn .btn{
+  margin-top: 35px;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+/* right */
+.bottom_sec .b_s_right .side_chi{
+  flex-basis: 47%;
+}
+.bottom_sec .b_s_right .side_chi figure{
+  width: 100%;
+}
+.bottom_sec .b_s_right .side_chi figure img{
+  width: 100%;
+}
+.b_s_right .side_chi .art_wrap{
+  padding-top: 20px;
+}
+/* for woman */
+#woman_section{
+  background: transparent url("../img/woman_side.png") no-repeat left;
+  background-size: 8% 100%;
+}
+.men_con .bottom_sec .for_woman_back{
+  background: transparent url("../img/woman.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+/* new arrival best seller */
+#new_arrival{
+  background: transparent url(../img/woman_side.png) no-repeat right;
+  background-size: 8% 100%;
+}
+.men_con .new_arri .new_sel_left{
+  flex: 1 0 26%;
+}
+.men_con .new_arri .new_sel_other{
+  flex: 1 0 10%;
+  align-self: center;
+}
+.men_con .new_arri .new_sel_other .arro_wrap{
+  width: 61%;
+}
+.men_con .new_arri .new_sel_left .clo_hea{
+  width: 92%;
+}
+.men_con .new_arri .new_sel_left .ash_col{
+  color: rgba(73, 73, 73, 0.57);
+}
+/* from the blog */
+#from_blog{
+  border-top: 1px solid rgba(73, 73, 73, 0.16);
+  border-bottom: 1px solid rgba(73, 73, 73, 0.16);
+  background: transparent url("../img/new_arrival_side.png") no-repeat 0% 0%;
+  background-size: 7% 100%;
+}
+.fr_bl_con .top_sec .sel_chi{
+  flex-basis: 60%;
+}
+.fr_bl_con .top_sec .sel_chi .clo_hea{
+  width: 50%;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #808080;
+}
+/* blog posts */
+.fr_bl_con .blog_wrap{
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.fr_bl_con .blog_wrap .blog_chi{
+  flex: 0 0 30%;
+}
+.blog_wrap .blog_chi .background{
+  height: 15vw;
+  position: relative;
+}
+.blog_wrap .blog_chi:nth-child(1) .background{
+  background: transparent url("../img/background_one.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.blog_wrap .blog_chi:nth-child(2) .background{
+  background: transparent url("../img/background_two.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.blog_wrap .blog_chi:nth-child(3) .background{
+  background: transparent url("../img/background_three.png") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+/* blog posts */
+.fr_bl_con .blog_wrap .blog_chi .heading{
+  font-family: GothamMedium;
+  font-size: 14px;
+  color: #444444;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.fr_bl_con .blog_wrap .blog_chi .para{
+  margin-top: 12px;
+}
+.fr_bl_con .blog_wrap .blog_chi .date{
+  background-color: #db3838;
+  display: inline-block;
+  padding: 7px 3px 10px 3px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.fr_bl_con .blog_wrap .blog_chi .date h1{
+  font-family: GothamMedium;
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  width: 50px;
+  height: 30px;
+  font-weight: 100;
+}
+.fr_bl_con .blog_wrap .blog_chi .date p{
+  font-family: GothamMedium;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* before footer */
+#bef_footer{}
+.bef_foot_con{
+  padding: 50px 0px 50px 0px;
+}
+.bef_foot_con .top_wrap{
+  align-items: center;
+  margin-bottom: 25px;
+}
+  /* brand icon */
+.bef_foot_con .top_wrap .fir_chi{
+  flex: 0 0 20%;
+}
+.bef_foot_con .top_wrap .fir_chi figure{
+  width: 75%;
+}
+.bef_foot_con .top_wrap .fir_chi figure img{
+  width: 100%;
+}
+/* center */
+.bef_foot_con .top_wrap .sec_chi{
+  flex: 0 0 35%;
+}
+.bef_foot_con .top_wrap .sec_chi h2{
+  font-family: GothamBold;
+  color: #444444;
+  font-size: 20px;
+  text-align: right;
+  text-transform: uppercase;
+}
+/* right */
+.bef_foot_con .top_wrap .thi_chi{
+  flex: 0 0 40%;
+}
+.top_wrap .thi_chi .inp_con input:first-child{
+  flex: 1 0 69%;
+  background-color: #e8e8e8;
+  padding: 0px 0px 0px 20px;
+  border: 0px solid transparent;
+}
+.top_wrap .thi_chi .inp_con input:last-child{
+  flex: 1 0 20%;
+  border: 0px solid transparent;
+  cursor: pointer;
+}
+/* bottom link section */
+.bef_foot_con .bottom_wrap .para_con{
+  flex-basis: 25%;
+}
+.bef_foot_con .bottom_wrap .para_con .para{
+  width: 85%;
+}
+/* right link section */
+.bef_foot_con .bottom_wrap .right_side_foter{
+  border-top: 1px solid rgba(73, 73, 73, 0.16);
+  flex-basis: 75%;
+}
+.bottom_wrap .right_side_foter .link_wrapper{
+  margin-top: 25px;
+}
+.bottom_wrap .right_side_foter .link_wrapper{
+  margin-top: 25px;
+}
+.bottom_wrap .right_side_foter .link_wrapper .link_con{
+  flex-basis: 28%;
+}
+.bottom_wrap .right_side_foter .link_wrapper .address_con{
+  flex-basis: 35%;
+}
+.bottom_wrap .right_side_foter .link_hea{
+  text-transform: uppercase;
+  font-family: GothamMedium;
+  font-size: 15px;
+  color: #7b7171;
+}
+.bottom_wrap .right_side_foter .link_wrap{
+  margin-top: 15px;
+  margin-left: 5px;
+}
+.right_side_foter .link_wrap .para{
+  margin-bottom: 8px;
+  text-transform: capitalize;
+  display: block;
+  font-size: 14px;
+}
+.right_side_foter .link_wrap .para i{
+  color: rgb(106, 111, 112);
+}
+/* address section */
+.right_side_foter .address_con .add_wrap{
+  margin-top: 20px;
+}
+.right_side_foter .address_con .add_wrap .para{
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+/* footer section */
+#footer .foot_con{
+  padding: 35px 0px;
+  border-top: 1px solid rgba(73, 73, 73, 0.16);
+}
+.foot_con .para{
+  text-align: center;
+}
+
+/*
+
+GothamBold
+GothamBook
+GothamLightRegular
+GothamMedium
+OpenSans-Italic
+
+
+ */
